@@ -158,5 +158,9 @@
         if (link === location) {
           $(this).parent().addClass('active');
         }
-      }); 
+      });
+
+      $(document).on('submit', function () {
+        $('button').prop('disabled', true);
+      });
     </script>
