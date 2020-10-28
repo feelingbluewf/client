@@ -2,6 +2,10 @@
 
 @section('content')
 
+<!-- select2 js -->
+<link href="{{ asset('css/select2.min.css') }}" rel="stylesheet" />
+<script src="{{ asset('js/select2.min.js') }}"></script>
+
 <div class="container">
     <div class="row">
         <div class="col-md-12">
@@ -24,7 +28,51 @@
                         </div>
                         <div class="form-group has-feedback">
                             <label for="brand">Brand</label>
-                            <input type="text" name="brand" class="form-control" id="brand" placeholder="Brand" value="{{ old('brand') }}" required>
+                            <select name="brand" data-placeholder="Choose car brand" class="form-control" id="brand" required>
+                                <option></option>
+                                <option>Audi</option>
+                                <option>BMW</option>
+                                <option>Buick</option>
+                                <option>Cadillac</option>
+                                <option>Chevrolet</option>
+                                <option>Chrysler</option>
+                                <option>Dodge</option>
+                                <option>Ferrari</option>
+                                <option>Ford</option>
+                                <option>GM</option>
+                                <option>GEM</option>
+                                <option>GMC</option>
+                                <option>Honda</option>
+                                <option>Hummer</option>
+                                <option>Hyundai</option>
+                                <option>Infiniti</option>
+                                <option>Isuzu</option>
+                                <option>Jaguar</option>
+                                <option>Jeep</option>
+                                <option>Kia</option>
+                                <option>Lamborghini</option>
+                                <option>Land Rover</option>
+                                <option>Lexus</option>
+                                <option>Lincoln</option>
+                                <option>Lotus</option>
+                                <option>Mazda</option>
+                                <option>Mercedes</option>
+                                <option>Mercury</option>
+                                <option>Mitsubishi</option>
+                                <option>Nissan</option>
+                                <option>Oldsmobile</option>
+                                <option>Peugeot</option>
+                                <option>Pontiac</option>
+                                <option>Porsche</option>
+                                <option>Regal</option>
+                                <option>Saab</option>
+                                <option>Saturn</option>
+                                <option>Subaru</option>
+                                <option>Suzuki</option>
+                                <option>Toyota</option>
+                                <option>Volkswagen</option>
+                                <option>Volvo</option>
+                            </select>
                             <span class="glyphicon form-control-feedback"></span>
                         </div>
                         <div class="form-group has-feedback">
@@ -44,5 +92,37 @@
         </div>
     </div>
 </div>
+
+<script>
+    function matchCustom(params, data) {
+    // If there are no search terms, return all of the data
+    if ($.trim(params.term) === '') {
+      return data;
+  }
+
+    // Do not display the item if there is no 'text' property
+    if (typeof data.text === 'undefined') {
+      return null;
+  }
+
+  if (data.text.toUpperCase().indexOf(params.term.toUpperCase()) > -1) {
+      var modifiedData = $.extend({}, data, true);
+      modifiedData.text += ' (finded)';
+
+      // You can return modified objects from here
+      // This includes matching the `children` how you want in nested data sets
+      return modifiedData;
+  }
+
+
+    // Return `null` if the term should not be displayed
+    return null;
+}
+
+$("#brand").select2({
+    matcher: matchCustom
+});
+
+</script>
 
 @endsection

@@ -113,7 +113,7 @@
             <div class="row justify-content-center">
               <div class="col">
                 @if(count($errors))
-                <div class="alert alert-danger">
+                <div class="alert alert-danger" style="margin: 0; width: 100%;">
                   @foreach ($errors->all() as $error)
                   <li>
                     {{ $error }}
@@ -122,14 +122,14 @@
                 </div>
                 @endif
                 @if(session()->has('error'))
-                <div class="alert alert-danger">
+                <div class="alert alert-danger" style="margin: 0; width: 100%;">
                   <li>
                     {{ session('error') }}
                   </li>
                 </div>
                 @endif
                 @if(session()->has('success'))
-                <div class="alert alert-success">
+                <div class="alert alert-success" style="margin: 0; width: 100%;">
                   <li>
                     {{ session('success') }}
                   </li>
