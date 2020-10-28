@@ -75,6 +75,9 @@ class OrderController extends Controller
     public function show($id)
     {
         $order = $this->orderRepository->getById($id);
+        if(!$order) {
+            abort(404, 'Page not found');
+        }
         $service_type = $order->service_type ? $order->service_type : 'Diagnostics';
         return view('carfix.orders.show', [
             'order' => $order,

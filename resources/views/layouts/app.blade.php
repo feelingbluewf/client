@@ -150,31 +150,31 @@
 
 
     <script>
-      // $('nav div.container div.col a').each(function() {
-      //   var pathname = window.location.pathname;
-      //   var path =  pathname.split('/')[1];
-      //   if(path == 'history') {
-      //     path = 'orders';
-      //   }
-      //   var location = window.location.protocol + '//' + window.location.host + '/' + path;
-      //   var link = $(this).attr('href');
-      //   if (link === location) {
-      //     $(this).parent().addClass('active');
-      //   }
-      // });
-
       $('nav div.container div.col a').each(function() {
         var pathname = window.location.pathname;
-        var path =  pathname.split('/')[2];
+        var path =  pathname.split('/')[1];
         if(path == 'history') {
           path = 'orders';
         }
-        var location = window.location.protocol + '//' + window.location.host + '/client/' + path;
+        var location = window.location.protocol + '//' + window.location.host + '/' + path;
         var link = $(this).attr('href');
         if (link === location) {
           $(this).parent().addClass('active');
         }
       });
+
+      // $('nav div.container div.col a').each(function() {
+      //   var pathname = window.location.pathname;
+      //   var path =  pathname.split('/')[2];
+      //   if(path == 'history') {
+      //     path = 'orders';
+      //   }
+      //   var location = window.location.protocol + '//' + window.location.host + '/client/' + path;
+      //   var link = $(this).attr('href');
+      //   if (link === location) {
+      //     $(this).parent().addClass('active');
+      //   }
+      // });
 
       // $('nav div.container div.col a').each(function() {
       //   var pathname = window.location.pathname;

@@ -12,8 +12,6 @@
 @endsection
 
 @section('content')
-{{ Carbon\Carbon::now() }}
-
 <div class="container">
     <div class="row">
         <div class="col" style="padding-right: 0; padding-left: 0;">
