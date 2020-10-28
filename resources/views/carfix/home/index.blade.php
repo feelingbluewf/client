@@ -9,7 +9,7 @@
             </form>
         </div>
     </div>
-    <div class="row text-center mt-4" style="margin-top: 25% !important;">
+    <div class="row text-center mt-4">
         <div class="col">
             <a href="{{ asset('orders/create/Regular maintenance') }}"><img src="{{ asset('pictures/maintenance.png') }}" width="100%" {{-- style="border: 2px solid #000; background-color: white;" --}}>
             <strong>Regular maintenance</strong></a>
