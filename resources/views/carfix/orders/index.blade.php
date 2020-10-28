@@ -7,15 +7,23 @@
         padding-top: 0 !important;
         padding-bottom: 0 !important;
     }
+    html, body {
+        height: 100% !important;
+    }
+    #app, .py-4 {
+        height: 100% !important;
+    }
 </style>
+
+
 
 @endsection
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col" style="padding-right: 0; padding-left: 0;">
-            <div class="card">
+<div class="container" style="height: 100%;">
+    <div class="row justify-content-center" style="height: 100%;">
+        <div class="col" style="padding-right: 0; padding-left: 0; height: 100%;">
+            <div class="card" style="height: 100%;">
                 <div class="card-header">
                     <div class="row" style="align-items: center;">
                         <div class="col text-center grey active">
@@ -55,9 +63,9 @@
                         @forelse($orders as $order)
                         @if($loop->last)
                         @if($order->is_submitted == 0)
-                        <a href="{{ route('carfix.orders.show', $order->id) }}" style="text-decoration: none"><div class="row" style="font-size: 11px; border-bottom: 1px solid rgba(0, 0, 0, 0.125);">
+                        <a href="{{ route('carfix.orders.show', $order->id) }}" style="text-decoration: none"><div class="row mb-5" style="font-size: 11px; border-bottom: 1px solid rgba(0, 0, 0, 0.125);">
                             @else
-                            <a href="#" style="text-decoration: none"><div class="row" style="font-size: 11px; border-bottom: 1px solid rgba(0, 0, 0, 0.125);">
+                            <a href="#" style="text-decoration: none"><div class="row mb-5" style="font-size: 11px; border-bottom: 1px solid rgba(0, 0, 0, 0.125);">
                                 @endif
                                 @else
                                 @if($order->is_submitted == 0)

@@ -46,25 +46,29 @@
 				</div>
 				@forelse($cars as $car)
 				<div class="card-body">
-					<div class="row" style="align-items: center;">
-						<div class="col text-center">
-							{{ $car->brand . ' ' . $car->model }}
-						</div>
-						<div class="col text-center">
-							{{ $car->car_number }}
-						</div>
-						<div class="col text-center">
-							<a href="#" style="text-decoration: none;">
-								<button class="btn btn-success">Edit</button>
-							</a>
+					@if($loop->last)
+					<div class="row mb-5" style="align-items: center;">
+						@else
+						<div class="row" style="align-items: center;">
+							@endif
+							<div class="col text-center">
+								{{ $car->brand . ' ' . $car->model }}
+							</div>
+							<div class="col text-center">
+								{{ $car->car_number }}
+							</div>
+							<div class="col text-center">
+								<a href="#" style="text-decoration: none;">
+									<button class="btn btn-success">Edit</button>
+								</a>
+							</div>
 						</div>
 					</div>
+					@empty
+					<h4 style="margin: 10px;">You haven't added any cars yet!</h4>
+					@endforelse
 				</div>
-				@empty
-				<h4 style="margin: 10px;">You haven't added any cars yet!</h4>
-				@endforelse
 			</div>
 		</div>
 	</div>
-</div>
-@endsection
+	@endsection
