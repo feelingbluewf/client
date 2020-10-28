@@ -27,6 +27,9 @@
 
   <!-- jQuery 2.1.4 -->
   <script type="text/javascript" src="{{ asset('/js/jquery-2.1.4.min.js') }}"></script>
+  
+  <!-- Moment JS -->
+  <script type="text/javascript" src="{{ asset('/js/moment.js') }}"></script>
 
   <!-- Jquery Modal -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
@@ -159,6 +162,19 @@
           $(this).parent().addClass('active');
         }
       });
+
+      // $('nav div.container div.col a').each(function() {
+      //   var pathname = window.location.pathname;
+      //   var path =  pathname.split('/')[2];
+      //   if(path == 'history') {
+      //     path = 'orders';
+      //   }
+      //   var location = window.location.protocol + '//' + window.location.host + '/client/' + path;
+      //   var link = $(this).attr('href');
+      //   if (link === location) {
+      //     $(this).parent().addClass('active');
+      //   }
+      // });
 
       $(document).on('submit', function () {
         $('button').prop('disabled', true);
