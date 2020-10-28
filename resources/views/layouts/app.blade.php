@@ -43,27 +43,27 @@
         <div class="container">
           @if(Auth::check())
           <div class="col text-center grey">
-            <a href="{{ route('carfix.home.index') }}"><i class="fas fa-home" style="font-size: 28px;"></i></a>
-            <span>Home</span>
+            <a href="{{ route('carfix.home.index') }}" style="text-decoration: none;"><i class="fas fa-home" style="font-size: 28px;"></i>
+            <span>Home</span></a>
           </div>
           <div class="col text-center grey">
-            <a href="{{ route('carfix.orders.index') }}"><i class="fas fa-wrench" style="font-size: 28px;"></i></a>
-            <span>Orders</span>
+            <a href="{{ route('carfix.orders.index') }}" style="text-decoration: none;"><i class="fas fa-wrench" style="font-size: 28px;"></i>
+            <span>Orders</span></a>
           </div>
           <div class="col text-center grey">
-            <a href="{{ route('carfix.cars.index') }}"><i class="fas fa-car" style="font-size: 28px;"></a></i></a>
-            <span>Cars</span>
+            <a href="{{ route('carfix.cars.index') }}" style="text-decoration: none;"><i class="fas fa-car" style="font-size: 28px;"></i>
+            <span>Cars</span></a>
           </div>
           {{-- <div class="col text-center grey">
             <i class="fas fa-exclamation" style="font-size: 28px;"></i>
             <span>Offers</span>
           </div> --}}
           <div class="col text-center grey">
-            <i class="fas fa-map-marker-alt" style="font-size: 28px;"></i>
-            <span>Services</span>
+            <a href="{{ route('carfix.services.index') }}" style="text-decoration: none;"><i class="fas fa-map-marker-alt" style="font-size: 28px;"></i>
+            <span>Services</span></a>
           </div>
           <div class="col text-center grey">
-            <a href="{{ route('carfix.profile.index') }}"><i class="fas fa-user" style="font-size: 28px;"></i></a>
+            <a href="{{ route('carfix.profile.index') }}" style="text-decoration: none;"><i class="fas fa-user" style="font-size: 28px;"></i></a>
             <span>Profile</span>
           </div>
           @else

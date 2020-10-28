@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Carfix;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class ActiveOrderController extends Controller
+class ServiceController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class ActiveOrderController extends Controller
      */
     public function index()
     {
-        return view('carfix.orders.active.index');
+        return view('carfix.services.index');
     }
 
     /**
