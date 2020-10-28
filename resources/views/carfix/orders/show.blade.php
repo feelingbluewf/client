@@ -164,7 +164,11 @@
                     </div>
                     @empty
                     @endforelse
-                    <button class="btn btn-danger" style="width: 100%;">Cancel order</button>
+                    <form action="{{ route('carfix.orders.destroy', $order->id) }}" method="POST">
+                        @csrf
+                        <input type="hidden" name="_method" value="DELETE">
+                        <button class="btn btn-danger" style="width: 100%;">Cancel order</button>
+                    </form> 
                 </div>
             </div>
         </div>

@@ -117,6 +117,8 @@ class OrderController extends Controller
      */
     public function destroy($id)
     {
-        //
+        if($this->orderRepository->delete($id)) {
+            return redirect(route('carfix.orders.index'))->withSuccess('The order has been successfully deleted!');
+        }
     }
 }

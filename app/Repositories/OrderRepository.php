@@ -50,4 +50,10 @@ class OrderRepository extends CoreRepository {
 			'offer_id' => $offer_id
 		]);
 	}
+
+	public function delete($order_id) {
+		return $this->startConditions()
+		->where('id', $order_id)
+		->delete();
+	}
 }
