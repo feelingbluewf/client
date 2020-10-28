@@ -63,7 +63,7 @@
             <span>Services</span>
           </div>
           <div class="col text-center grey">
-            <i class="fas fa-user" style="font-size: 28px;"></i>
+            <a href="{{ route('carfix.profile.index') }}"><i class="fas fa-user" style="font-size: 28px;"></i></a>
             <span>Profile</span>
           </div>
           @else

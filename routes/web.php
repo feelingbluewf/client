@@ -31,6 +31,7 @@ Route::group(['middleware' => 'auth', 'namespace' => 'Carfix'], function() {
 
 	Route::resource('home', 'HomeController')->names('carfix.home');
 
+	Route::resource('profile', 'ProfileController')->names('carfix.profile');
 
 });
 
